@@ -138,6 +138,10 @@ h1 {
     display: grid;
   }
 
+  .right {
+    order: 2;
+  }
+
   .image-box img {
     object-position: 0 -69px;
     object-fit: contain;
