@@ -11,7 +11,7 @@
     <header>
       <div class="container">
         <!-- NAVIGATION SECTION OF THE PAGE -->
-        <nav>
+        <nav id="navigation">
           <div class="logo"><span>DATA MUNCHER</span></div>
           <div class="desktop-nav">
             <ul class="list">
@@ -20,21 +20,11 @@
               <li class="list-item">Contact</li>
             </ul>
           </div>
-
-          <div class="mobile-nav">
-            <div class="hamburger">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </div>
-            <div class="dropdown">
-              <ul class="list">
-                <li class="list-item">Home</li>
-                <li class="list-item">About</li>
-                <li class="list-item">Contact</li>
-              </ul>
-            </div>
-          </div>
+          <button class="mobile_nav">
+            <div class="lines line1"></div>
+            <div class="lines line2"></div>
+            <div class="lines line3"></div>
+          </button>
         </nav>
 
         <!-- HERO SECTION OF THE PAGE -->
@@ -64,6 +54,15 @@
         </div>
       </div>
     </header>
+
+    <!-- DROPDOWN MENU SECTION -->
+    <div class="dropdown">
+      <ul class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
 
     <section class="container">
       <div class="main">
@@ -110,5 +109,6 @@
         </div>
       </article>
     </section>
+    <script src="./index.js"></script>
   </body>
 </html>

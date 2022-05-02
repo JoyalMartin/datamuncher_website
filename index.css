@@ -82,6 +82,7 @@ select {
   --cta-color: #366e67;
   --container-padding: 0 40px;
   --button-padding: 10px 20px;
+  --article-padding: 200px;
 }
 
 body {
@@ -122,7 +123,7 @@ h1 {
 }
 
 @media screen and (min-width: 500px) {
-  .mobile-nav {
+  .mobile_nav {
     display: none;
   }
 
@@ -161,39 +162,25 @@ h1 {
   :root {
     --container-padding: 0 20px;
     --button-padding: 5px 10px;
+    --article-padding: 50px;
   }
 
   .desktop-nav {
     display: none;
   }
 
+  .mobile_nav {
+    z-index: 10;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--text-color);
+    border: none;
+    outline: none;
+  }
+
   .description-box {
     display: none;
-  }
-
-  .hamburger {
-    cursor: pointer;
-  }
-
-  .hamburger .line {
-    display: block;
-    padding: 2px 20px;
-    background-color: black;
-    margin-bottom: 3px;
-  }
-
-  .dropdown {
-    background-color: var(--text-color);
-    color: var(--secondary-color);
-    width: 100%;
-    position: absolute;
-    top: 42px;
-    left: 0;
-    padding: 10px;
-  }
-
-  .mobile-nav .list {
-    flex-direction: column;
   }
 
   /* .hero-image {
@@ -249,6 +236,21 @@ nav {
   margin-right: 20px;
 }
 
+.lines {
+  width: 30px;
+  height: 3px;
+  background-color: var(--cta-color);
+  transition: transform 200ms ease-in-out;
+}
+
+.line2 {
+  margin-top: 3px;
+}
+
+.line3 {
+  margin-top: 3px;
+}
+
 .main {
   margin-top: 100px;
   width: 100%;
@@ -264,7 +266,7 @@ nav {
 
 .image-box {
   grid-template-columns: 1fr 1fr;
-  padding-top: 200px;
+  padding-top: var(--article-padding);
   text-align: left;
 }
 
@@ -283,4 +285,36 @@ nav {
 .cta-btn-2:hover {
   background-color: var(--cta-color);
   color: var(--secondary-color);
+}
+
+.active .line1 {
+  transform: translateY(6px) rotateZ(45deg);
+}
+
+.active .line2 {
+  visibility: hidden;
+}
+
+.active .line3 {
+  transform: translateY(-6px) rotateZ(-45deg);
+}
+
+.dropdown {
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+  visibility: hidden;
+  transform: translateX(-100%);
+  transition: transform 200ms cubic-bezier(0.49, 0.96, 0.25, 1);
+  height: 100vh;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.show.dropdown {
+  visibility: visible;
+  transform: translateX(0);
 }
