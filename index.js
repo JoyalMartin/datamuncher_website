@@ -1,4 +1,5 @@
 var button = document.querySelector(".mobile_nav");
+let navigation = document.querySelector("#navigation");
 
 let line1 = document.querySelector(".line1");
 let line2 = document.querySelector(".line2");
@@ -12,7 +13,9 @@ button.addEventListener("click", () => {
   dropdown.classList.toggle("show");
   if (!button.classList.contains("active")) {
     button.style.backgroundColor = "var(--primary-color)";
+    document.body.style.overflowY = "scroll";
   } else {
     button.style.backgroundColor = "var(--text-color)";
+    document.body.style.overflowY = "hidden";
   }
 });
