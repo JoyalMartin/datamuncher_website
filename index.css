@@ -76,10 +76,10 @@ select {
 /* USER CUSTOMISATIONS BEGINS HERE */
 
 :root {
-  --primary-color: #fbb461;
-  --secondary-color: #fefbe8;
-  --text-color: #420608;
-  --cta-color: #366e67;
+  --primary-color: #f99623;
+  --secondary-color: #f3fafd;
+  --text-color: #281e05;
+  --cta-color: #373639;
   --container-padding: 0 40px;
   --button-padding: 10px 20px;
   --article-padding: 200px;
@@ -215,7 +215,7 @@ h1 {
 
 .cta-btn:hover {
   background-color: var(--cta-color);
-  color: var(--secondary-color);
+  color: white;
   border: none;
 }
 
@@ -284,7 +284,7 @@ nav {
 
 .cta-btn-2:hover {
   background-color: var(--cta-color);
-  color: var(--secondary-color);
+  color: white;
 }
 
 .active .line1 {
